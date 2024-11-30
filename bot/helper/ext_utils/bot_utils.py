@@ -248,7 +248,7 @@ def source(self):
 
 
 def get_readable_message():
-    msg = "<pre>Powered by <a href='https://t.me/ASA_MIKATA1'>ASA MIKATA</a></pre>"
+    msg = "<b>Powered by <a href='https://t.me/ASA_MIKATA1'>ASA MIKATA</a></b>\n\n"
     button = None
     tasks = len(download_dict)
     current_time = get_readable_time(time() - bot_start_time)
