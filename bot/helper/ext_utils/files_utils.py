@@ -85,6 +85,7 @@ ARCH_EXT = [
     ".udf",
     ".vhd",
     ".xar",
+    ".cbz",
 ]
 
 
