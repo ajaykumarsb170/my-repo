@@ -138,12 +138,12 @@ class MirrorLeechListener:
 
     async def on_download_start(self):
         if config_dict["LEECH_LOG_ID"]:
-            msg = "<b>∎∎ Task Started ∎∎</b>\n\n"
+            msg = "<b>Task Started</b>\n\n"
             msg += f"<b>• Task by:</b> {self.tag}\n"
             msg += f"<b>• User ID: </b><code>{self.message.from_user.id}</code>"
             self.linkslogmsg = await sendCustomMsg(config_dict["LEECH_LOG_ID"], msg)
         self.botpmmsg = await sendCustomMsg(
-            self.message.from_user.id, "<b>∎∎ Task Started ∎∎</b>"
+            self.message.from_user.id, "<b>Task Started</b>"
         )
 
     async def on_download_complete(self):
