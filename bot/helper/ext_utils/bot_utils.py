@@ -233,9 +233,9 @@ def progress_bar(pct):
     if isinstance(pct, str):
         pct = float(pct.strip("%"))
     p = min(max(pct, 0), 100)
-    int((p + 5) // 10)
-    p_str += ["■"][cPart]
-    p_str += "□" * (10 - cFull)
+    c_full = int((p + 5) // 10)
+    p_str = "■" * c_full
+    p_str += "○" * (10 - c_full)
     return p_str
 
 
