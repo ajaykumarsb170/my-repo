@@ -129,8 +129,6 @@ async def stats(_, message):
         f"<code>• Disk usage :</code> {disk}%\n"
         f"<code>• Free space :</code> {get_readable_file_size(free)}\n"
         f"<code>• Total space:</code> {get_readable_file_size(total)}\n\n"
-        f"<code>• Upload speed :</code> {upload_speed_readable}\n"
-        f"<code>• Download speed :</code> {download_speed_readable}\n"
     )
 
     limitations = "<b>LIMITATIONS</b>\n\n"
