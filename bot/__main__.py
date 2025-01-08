@@ -110,6 +110,7 @@ async def stats(_, message):
     current_time = get_readable_time(time() - bot_start_time)
     os_uptime = get_readable_time(time() - boot_time())
     cpu_usage = cpu_percent(interval=0.5)
+    upload_speed_readable, download_speed_readable = calculate_network_speed()
     limit_mapping = {
         "Torrent": config_dict.get("TORRENT_LIMIT", "∞"),
         "Gdrive": config_dict.get("GDRIVE_LIMIT", "∞"),
@@ -128,6 +129,8 @@ async def stats(_, message):
         f"<code>• Disk usage :</code> {disk}%\n"
         f"<code>• Free space :</code> {get_readable_file_size(free)}\n"
         f"<code>• Total space:</code> {get_readable_file_size(total)}\n\n"
+        f"<code>• Upload speed :</code> {upload_speed_readable}\n"
+        f"<code>• Download speed :</code> {download_speed_readable}\n"
     )
 
     limitations = "<b>LIMITATIONS</b>\n\n"
