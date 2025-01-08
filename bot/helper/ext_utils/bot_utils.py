@@ -298,8 +298,6 @@ def get_readable_message():
     msg += f"<b>• Tasks</b>: {tasks}{bmax_task}"
     msg += f"\n<b>• Bot uptime</b>: {current_time}"
     msg += f"\n<b>• Free disk space</b>: {get_readable_file_size(disk_usage('/usr/src/app/downloads/').free)}"
-    msg += f"<code>• Upload speed :</code> {upload_speed_readable}\n"
-    msg += f"<code>• Download speed :</code> {download_speed_readable}\n"
     return msg, button
 
 
