@@ -507,7 +507,7 @@ class MirrorLeechListener:
                 if self.isSuperGroup:
                     await send_message(
                         self.message,
-                        f"{msg}<blockqoute><b>Files has been sent to your DM</b><blockqoute>",
+                        f"{msg}<blockqoute><b>Files has been sent to your DM</b>\n",
                         inboxButton.column(1),
                     )
                 else:
@@ -553,7 +553,7 @@ class MirrorLeechListener:
             if self.isSuperGroup:
                 await send_message(
                     self.message,
-                    f"{msg} <blockqoute><b>Links has been sent to your DM</b><blockqoute>",
+                    f"{msg} <blockqoute><b>Links has been sent to your DM</b>\n",
                     inboxButton.column(1),
                 )
             else:
